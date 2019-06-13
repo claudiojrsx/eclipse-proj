@@ -15,7 +15,7 @@ public class TestaMetodo {
 		Conta contaBianca = new Conta();
 		contaBianca.deposita(1000);
 		
-		if (contaBianca.transfere(300, contaClaudio)) {
+		if (contaBianca.transfere(3000, contaClaudio)) {
 			System.out.println("Transferencia feita com sucesso!");
 		} else {
 			System.out.println("Limite indisponível.");
