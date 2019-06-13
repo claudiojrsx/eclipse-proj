@@ -22,5 +22,8 @@ public class TestaMetodo {
 		}
 		System.out.println("Bianca seu saldo agora é de: " + contaBianca.saldo);
 		System.out.println("Claudio seu saldo agora é de: " + contaClaudio.saldo);
+		
+		contaClaudio.titular = "Claudio Ramalho";
+		System.out.println(contaClaudio.titular);
 	}
 }
