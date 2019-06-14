@@ -1,13 +1,13 @@
 
 public class Conta {
 
-	double saldo;
+	double saldo = 100;
 	int agencia;
 	int numero;
-	Cliente titular;
+	Cliente titular = new Cliente();
 
 	public void deposita(double valor) {
-		this.saldo = this.saldo + valor;
+		this.saldo += valor;
 	}
 
 	public boolean saca(double valor) {
