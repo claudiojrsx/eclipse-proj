@@ -1,7 +1,7 @@
 
 public class Conta {
 
-	double saldo = 100;
+	private double saldo;
 	int agencia;
 	int numero;
 	Cliente titular = new Cliente();
@@ -26,5 +26,9 @@ public class Conta {
 			return true;
 		}
 		return false;
+	}
+	
+	public double getSaldo() {
+		return this.saldo;
 	}
 }
