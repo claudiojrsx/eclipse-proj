@@ -9,6 +9,5 @@ public class TesteFuncionario {
 
 		System.out.println(claudio.getNome());
 		System.out.println(claudio.getBonificacao());
-		System.out.println();
 	}
 }
