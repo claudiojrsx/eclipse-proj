@@ -1,4 +1,5 @@
 
+//Gerente também é um funcionario, sendo assim ele herda da Classe Funcionario.java
 public class Gerente extends Funcionario {
 
 	private int senha;
@@ -17,6 +18,6 @@ public class Gerente extends Funcionario {
 	
 	public double getBonificacao() {
 		System.out.println("Chamando método de bonificação do GERENTE");
-		return super.getBonificacao() + super.getSalario();
+		return super.getSalario();
 	}
 }
