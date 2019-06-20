@@ -1,21 +1,7 @@
 
-//Gerente também é um funcionario, sendo assim ele herda da Classe Funcionario.java
-public class Gerente extends Funcionario {
+//Gerente também é um FuncionarioAutenticavel, sendo assim ele herda da Classe Funcionario.java
+public class Gerente extends FuncionarioAutenticavel {
 
-	private int senha;
-	
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-	
-	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
 	public double getBonificacao() {
 		System.out.println("Chamando método de bonificação do GERENTE");
 		return super.getSalario();
