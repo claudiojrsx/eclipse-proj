@@ -2,7 +2,7 @@
 //Contrato autenticavel
 	//Quem assina esse contrato, precisa, implementar
 		//Metodo setSenha
-		//Metodo autentica
+			//Metodo autentica
 
 public abstract interface Autenticavel {
 	
