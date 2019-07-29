@@ -6,72 +6,67 @@ public abstract class Conta {
 	private int numero;
 	private Cliente titular;
 	private static int total = 0;
-	
+
 	public Conta(int agencia, int numero) {
 		total++;
-		
+
 		this.agencia = agencia;
 		this.numero = numero;
-		//this.saldo = 0;
+		// this.saldo = 0;
 //		System.out.println("Conta " + this.numero + " criada com sucesso.");
-//		System.out.println("Total de conta(s) é: " + Conta.total);
+//		System.out.println("Total de conta(s) Ã©: " + Conta.total);
 	}
 
 	public abstract void deposita(double valor);
 
-	public boolean saca(double valor) {
-		if (this.saldo >= valor) {
-			this.saldo -= valor;
-			return true;
-		} else {
-			return false;
+	public void saca(double valor) {
+
+		if (this.saldo < valor) {
+			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
 		}
+			this.saldo -= valor;
 	}
 
-	public boolean transfere(double valor, Conta destino) {
-		if (this.saca(valor)) {
-			destino.deposita(valor);
-			return true;
-		} else {
-			return false;
-		}
+	public void transfere(double valor, Conta destino) {
+		this.saca(valor);
+		destino.deposita(valor);
 	}
-	
+
 	public double getSaldo() {
 		return this.saldo;
 	}
-	
+
 	public int getNumero() {
 		return this.numero;
 	}
-	
+
 	public void setNumero(int numero) {
 		if (numero <= 0) {
-			System.out.println("O valor não pode ser igual a 0");
+			System.out.println("O valor nÃ£o pode ser igual a 0");
 		}
 		this.numero = numero;
 	}
-	
+
 	public int getAgencia() {
 		return this.agencia;
 	}
-	
+
 	public void setAgencia(int agencia) {
 		if (agencia <= 0) {
-			System.out.println("O valor não pode ser igual a 0");
+			System.out.println("O valor nÃ£o pode ser igual a 0");
 			return;
 		}
 		this.agencia = agencia;
 	}
-	
+
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
-	
+
 	public Cliente getTitular() {
 		return titular;
 	}
-	
+
 	public static int getTotal() {
 		System.out.println();
 		return total;

@@ -6,9 +6,9 @@ public class ContaCorrente extends Conta implements Tributavel {
 	}
 	
 	@Override
-	public boolean saca(double valor) {
+	public void saca(double valor) {
 		double valoraSacar = valor + 0.2;
-		return super.saca(valoraSacar);
+		super.saca(valoraSacar);
 	}
 	
 	@Override
