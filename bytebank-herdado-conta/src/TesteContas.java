@@ -1,7 +1,7 @@
 
 public class TesteContas {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		int a = 3;
 		int b = a / 0;
