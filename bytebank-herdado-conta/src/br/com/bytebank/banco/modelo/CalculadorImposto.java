@@ -1,4 +1,6 @@
+package br.com.bytebank.banco.modelo;
 
+//modelo.CalculadorImposto => FQN
 public class CalculadorImposto {
 	
 	private double totalImposto;
