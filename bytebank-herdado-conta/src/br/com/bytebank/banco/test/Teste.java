@@ -12,7 +12,6 @@ public class Teste {
 		
 		System.out.println(cc.toString());
 		System.out.println(cp);
-		System.out.println(cliente);
 		
 	}
 	

@@ -91,4 +91,9 @@ public abstract class Conta {
 		System.out.println();
 		return total;
 	}
+	
+	@Override
+	public String toString() {
+		return "Número: " + this.numero + ", Agência: " + this.agencia;
+	}
 }
