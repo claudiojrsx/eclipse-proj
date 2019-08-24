@@ -1,4 +1,4 @@
-package br.com.claudio.bytebank;
+package br.com.bytebank.banco;
 
 import br.com.bytebank.banco.modelo.*;
 
@@ -10,6 +10,6 @@ public class TesteBiblioteca {
 		
 		c.deposita(190.0);
 		
-		System.out.println("O saldo da conta eh: " + c.getSaldo());
+		System.out.println("O saldo da conta é: " + c.getSaldo());
 	}
 }
