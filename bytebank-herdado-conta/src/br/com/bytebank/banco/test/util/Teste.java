@@ -30,5 +30,7 @@ public class Teste {
 			Object oRef = lista.get(i);
 			System.out.println(lista.get(i));
 		}
+		
+		System.out.println("Testando commit");
  	}
 }
