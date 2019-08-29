@@ -2,11 +2,11 @@ package br.com.bytebank.banco.test;
 
 import br.com.bytebank.banco.modelo.*;
 
-public class Teste {
+public class TesteGuardarReferencias {
 	 
 	public static void main(String[] args) {
 		
-		GuardaContas guardar = new GuardaContas();
+		GuardarReferencias guardar = new GuardarReferencias();
 		
 		Conta cc = new ContaCorrente(22, 11);
 		guardar.adiciona(cc);
@@ -17,7 +17,7 @@ public class Teste {
 		int tamanho = guardar.getQuantidadeDeElementos();
 		System.out.println(tamanho);
 		
-		Conta ref = guardar.getReferencia(1);
+		Conta ref = (Conta) guardar.getReferencia(0);
 		System.out.println(ref.getNumero());
 	}
 }
