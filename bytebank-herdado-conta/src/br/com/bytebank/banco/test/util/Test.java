@@ -7,9 +7,12 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		ArrayList lista = new ArrayList();
+		ArrayList<Conta> lista = new ArrayList<Conta>();
+		
+		
 		Conta cc = new ContaCorrente(22, 11);
 		lista.add(cc);
+		
 		Conta cc2 = new ContaCorrente(22, 22);
 		lista.add(cc2);
 
